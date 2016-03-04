@@ -53,6 +53,11 @@
 		{
 			$params = explode(",", $paramStr);
 			
+			if($allowCache)
+			{
+				mkdir("caches", 0777);
+			}
+			
 			$cacheFile = "caches/".md5($paramStr);
 			
 			if(is_file($cacheFile) && $allowCache)

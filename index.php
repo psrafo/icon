@@ -58,7 +58,7 @@
 				mkdir("caches", 0777);
 			}
 			
-			$cacheFile = "caches/".md5($paramStr);
+			$cacheFile = "caches/".md5($paramStr).".svg";
 			
 			if(is_file($cacheFile) && $allowCache)
 			{

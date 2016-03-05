@@ -1,6 +1,8 @@
 <?php
-	$iconSourcePath = "originals";
-	$allowCache = TRUE;
+	$configs = parse_ini_file("config.ini");
+	
+	$iconSourcePath = $configs["iconSourcePath"];
+	$allowCache = $configs["allowCache"];
 	
 	function getColor($iconNameWithoutExt = "", $colorIndex = 1)
 	{
